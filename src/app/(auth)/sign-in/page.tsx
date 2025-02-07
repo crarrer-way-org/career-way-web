@@ -1,5 +1,5 @@
 const SigninPage = () => {
-  return <div>SigninPage</div>;
+  return <div className="w-full h-1 bg-background"></div>;
 };
 
 export default SigninPage;
