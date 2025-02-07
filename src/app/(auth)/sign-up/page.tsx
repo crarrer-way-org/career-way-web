@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { SignupForm } from "@/features/auth/componenets/signup-form";
+import { AuthForm } from "@/features/auth/componenets/auth-form";
 import { cn } from "@/lib/utils";
 
 const SignupPage = () => {
@@ -17,7 +17,7 @@ const SignupPage = () => {
           <CardDescription>Sign Up to Skill Craft</CardDescription>
         </CardHeader>
         <CardContent>
-          <SignupForm />
+          <AuthForm variant="sign-up" />
         </CardContent>
       </Card>
       <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary  ">
