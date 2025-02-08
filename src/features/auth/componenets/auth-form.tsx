@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/password-input";
+import { useRegister } from "../api/use-register";
 import OauthGoogleButton from "./oauth-google-btn";
 
 type AuthFormProps = {
@@ -25,6 +26,8 @@ type AuthFormProps = {
 };
 
 export const AuthForm = ({ variant }: AuthFormProps) => {
+  const { mutate, isPending } = useRegister();
+
   const form = useForm<z.infer<typeof authSchema>>({
     resolver: zodResolver(authSchema),
     defaultValues: {
@@ -34,7 +37,7 @@ export const AuthForm = ({ variant }: AuthFormProps) => {
   });
 
   function onSubmit(values: z.infer<typeof authSchema>) {
-    console.log(values);
+    mutate({ json: values });
   }
 
   return (
@@ -88,7 +91,7 @@ export const AuthForm = ({ variant }: AuthFormProps) => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full">
+          <Button type="submit" disabled={isPending} className="w-full">
             Sign Up
           </Button>
         </form>
