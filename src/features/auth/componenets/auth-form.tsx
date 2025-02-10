@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/password-input";
+import Link from "next/link";
 import { useRegister } from "../api/use-register";
 import OauthGoogleButton from "./oauth-google-btn";
 
@@ -41,15 +42,15 @@ export const AuthForm = ({ variant }: AuthFormProps) => {
   }
 
   return (
-    <Form {...form}>
-      <div className="grid gap-6">
-        <OauthGoogleButton />
-        <div className="flex gap-x-2 items-center justify-center">
-          <span className="flex-1 h-1 bg-secondary" />
-          <p className="whitespace-nowrap px-2">Or continue with</p>
-          <span className="flex-1 h-1 bg-secondary" />
-        </div>
+    <div className="grid gap-6">
+      <OauthGoogleButton />
+      <div className="flex gap-x-2 items-center justify-center">
+        <span className="flex-1 border border-secondary" />
+        <p className="whitespace-nowrap px-2">Or continue with</p>
+        <span className="flex-1 border border-secondary" />
+      </div>
 
+      <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-6">
           <FormField
             control={form.control}
@@ -99,14 +100,14 @@ export const AuthForm = ({ variant }: AuthFormProps) => {
           {variant === "sign-in"
             ? "Don't have an account?"
             : "Already have an account"}{" "}
-          <a
+          <Link
             href={variant === "sign-in" ? "/sign-up" : "/sign-in"}
             className="underline underline-offset-4"
           >
             {variant === "sign-in" ? "Sign up" : "Sign in"}
-          </a>
+          </Link>
         </div>
-      </div>
-    </Form>
+      </Form>
+    </div>
   );
 };
