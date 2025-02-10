@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AuthForm } from "@/features/auth/componenets/auth-form";
 import { cn } from "@/lib/utils";
 
@@ -13,8 +7,7 @@ const SignupPage = () => {
     <div className={cn("flex flex-col gap-6")}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Welcome</CardTitle>
-          <CardDescription>Sign Up to Skill Craft</CardDescription>
+          <CardTitle className="text-xl">Access your account</CardTitle>
         </CardHeader>
         <CardContent>
           <AuthForm variant="sign-up" />
