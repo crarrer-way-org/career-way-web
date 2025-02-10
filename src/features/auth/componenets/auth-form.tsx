@@ -19,16 +19,19 @@ import {
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/password-input";
 import Link from "next/link";
-import { useRegister } from "../api/use-register";
 import OauthGoogleButton from "./oauth-google-btn";
 
 type AuthFormProps = {
   variant: "sign-up" | "sign-in";
+  onSubmitAction: (values: z.infer<typeof authSchema>) => void;
+  isPending: boolean;
 };
 
-export const AuthForm = ({ variant }: AuthFormProps) => {
-  const { mutate, isPending } = useRegister();
-
+export const AuthForm = ({
+  variant,
+  onSubmitAction,
+  isPending,
+}: AuthFormProps) => {
   const form = useForm<z.infer<typeof authSchema>>({
     resolver: zodResolver(authSchema),
     defaultValues: {
@@ -36,10 +39,6 @@ export const AuthForm = ({ variant }: AuthFormProps) => {
       password: "",
     },
   });
-
-  function onSubmit(values: z.infer<typeof authSchema>) {
-    mutate({ json: values });
-  }
 
   return (
     <div className="grid gap-6">
@@ -51,7 +50,10 @@ export const AuthForm = ({ variant }: AuthFormProps) => {
       </div>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-6">
+        <form
+          onSubmit={form.handleSubmit(onSubmitAction)}
+          className="grid gap-6"
+        >
           <FormField
             control={form.control}
             name="email"
