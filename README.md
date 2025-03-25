@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CreerWay | Job Finding Website
 
-## Getting Started
+## Project Manifesto
 
-First, run the development server:
+### Introduction
+CreerWay is an innovative job-finding platform designed specifically for IT professionals. It aims to bridge the gap between job seekers and companies by offering a seamless experience for applying to jobs, discovering companies, and conducting interviews—all within a single platform.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+With CreerWay, IT professionals can build detailed profiles, search for opportunities, and apply for jobs with ease. On the other hand, companies can craft compelling profiles, post job openings, and efficiently find top talent.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+What sets CreerWay apart is its built-in **interviewing platform**, enabling companies to conduct live interviews with candidates and allowing job seekers to practice with **preparation interviews**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌟 Key Features
+### 🏆 For Job Seekers
+- **Profile Creation** – Build a detailed profile showcasing your skills, experience, and portfolio.
+- **Job Search & Application** – Find job listings tailored to your expertise and apply with ease.
+- **Company Discovery** – Explore company profiles and understand their culture and job opportunities.
+- **Preparation Interviews** – Practice with mock interviews to sharpen your skills before real ones.
 
-## Learn More
+### 🏢 For Companies
+- **Job Posting** – Create and manage job postings for different roles.
+- **Talent Search** – Discover and reach out to top professionals in the industry.
+- **Company Profile** – Showcase your company's culture, values, and mission to attract the right candidates.
+- **Built-in Interviewing** – Conduct live interviews with candidates directly on the platform.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠 Tech Stack
+CreerWay is built using a modern and efficient technology stack to ensure performance, scalability, and maintainability:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend:** Next.js, React, shadcn/ui, Tailwind CSS
+- **Backend:** Hono.js
+- **Database & Authentication:** Appwrite
+- **State Management:** React Query
+- **Containerization & Deployment:** Docker
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Roadmap & Development
+CreerWay is still in its early development phase, and we have an ambitious roadmap ahead. You can follow our progress and contribute to the project here:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔗 [Roadmap & Project Board](https://github.com/orgs/crarrer-way-org/projects/1/views/1)
+
+🔗 [GitHub Repository](https://github.com/crarrer-way-org/career-way-web)
+
+---
+
+## 🎯 Vision & Goals
+Our mission with CreerWay is to create a job-finding experience that goes beyond just submitting resumes. We want to build a **career ecosystem** that fosters professional growth, enables direct communication between companies and job seekers, and simplifies the hiring process for everyone involved.
+
+We envision a platform where candidates can not only find jobs but also enhance their interviewing skills, get feedback, and land the right opportunities with confidence.
+
+---
+
+## 🤝 Contributing & Support
+We welcome contributions from developers, designers, and career professionals who share our vision. Whether it's improving the UI, adding new features, fixing bugs, or providing feedback, your support is invaluable.
+
+If you love this project, consider giving it a ⭐ on GitHub and joining our mission to make job searching in tech **smarter, simpler, and more effective**.
+
+---
+
+Built with ❤️ for IT professionals and companies.
+
